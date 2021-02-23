@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title> Customer Registration Form</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css'>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!--Main wrapper-->
+<div class="wrapper">
+    <h1>Customer Registration Form</h1>
+
+    <!--form container-->
+    <div class="form-container">
+    <form action="" method="post">
+        <!--flexbox and it's items-->
+        <div class="flex">
+            <div class="flex-item">
+            <!--full name field-->
+                <div class="field-container">
+                    <label for="full-name">Full Name: <span class="required">*</span></label>
+                    <input type="text" name="full-name"   pattern="^([a-zA-Z]{2,} ?)+$" id="full-name" placeholder="Your full name" required="required" />
+                    <span class="error-messg"></span>              
+                </div>
+            
+             <!--email field-->
+                <div class="field-container">
+                    <label for="email">Email: <span class="required">*</span></label>
+                    <input type="email" name="email" id="email" placeholder="Your email" required="required" />
+                    <span class="error-messg"></span>
+                </div>
+
+             <!--confirm email field-->
+                <div class="field-container">
+                    <label for="confirm-email">Confirm email: <span class="required">*</span></label>
+                    <input type="email" name="confirm-email" id="confirm-email" placeholder="Re-enter email" required="required" />
+                    <span class="error-messg"></span>
+                </div>
+                
+            </div>
+            <div class="flex-item">
+                <!--contact no field-->
+                <div class="field-container">
+                    <label for="contact-no">Contact no.: <span class="required">*</span></label>
+                    <input type="tel" name="contact-no" pattern=[0-9]{10} id="contact-no" placeholder="Mobile number" required="required" />
+                    <span class="error-messg"></span>
+                </div>
+
+                <!--password field-->
+                <div class="field-container">
+                    <label for="passkey">Password: <span class="required">*</span></label>
+                    <div class="passkey-box">
+                    <input type="password" name="passkey" id="passkey" class="passkey" placeholder="Password" required="required" />
+                    <span class="passkey-icon" data-display-passkey="off"><i class="fas fa-eye"></i>  </span>
+                    </div>
+                    <span class="error-messg"></span>
+                </div>
+
+                <!--confirm password field-->
+                <div class="field-container">
+                    <label for="confirm-passkey">Confirm password: <span class="required">*</span></label>
+                    <div class="passkey-box">
+                    <input type="password" name="confirm-passkey" class="passkey" id="confirm-passkey" placeholder="Re-enter password" required="required" />
+                    <span class="passkey-icon" data-display-passkey="off"><i class="fas fa-eye"></i></span>
+                    </div>
+                    <span class="error-messg"></span>
+                </div>
+                
+            </div>
+        </div>
+        	<div class="center">
+    <div id="captchaBackground">
+      <span id="captcha">captcha text</span>
+      <input id="textBox" type="text" name="text">
+      <div id="buttons">
+        <input class="subbutton" id="csubmit" type="submit">
+        <button class="refbutton" id="refresh" type="submit">Refresh</button>
+      </div> 
+      <span id="output"></span>
+    </div>
+  </div>
+        <!--Submit button-->
+        <div class="center"><input type="submit" value="Register"></div>
+    </form>
+    </div>
+
+</div>
+
+  <script  src="./js.js"></script>
+
+</body>
+</html>
